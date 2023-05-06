@@ -8,19 +8,22 @@ import Payment from './components/Payment'
 import SignupForm from './components/SignUpForm'
 import Toys from './components/Toys'
 import Treats from './components/Treats'
-import { BrowserRouter as Router, Route, Link, Routes, BrowserRouter } from 'react-router-dom';
+import { Route, Link, Routes, BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import Confirmation from './components/Confirmation';
 import LoginForm from './components/LoginForm';
 import CurrentUserProvider from './context/CurrentUser.js'
+import NavBar from './components/NavBar'
 
 
 
 function App() {
+  
   return (
     <div className="App">
       <CurrentUserProvider>
       <BrowserRouter>
+      <NavBar />
         <header>
           <div className='header'>
             <div className='titleheader'>

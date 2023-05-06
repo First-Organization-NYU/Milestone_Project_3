@@ -66,18 +66,19 @@ function LoginForm() {
 
     async function handleSubmit(e) {
         e.preventDefault()
-        const response = await fetch("http://localhost:5000/authentication", {
+        const response = await fetch("http://localhost:3002/authentication", {
             method: 'POST',
-            credentials: "include",
+            withCredentials: true,
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(credentials)
+            body: JSON.stringify(credentials),
+            
         })
 
         const data = await response.json()
 
-        if (response.status === 200) {
+        if (response?.status === 200) {
             setCurrentUser(data.user)
             localStorage.setItem('token', data.token)
             console.log(data.token)

@@ -1,38 +1,89 @@
-import { useState } from 'react';
+import { useState } from "react"
+import { useNavigate} from "react-router"
 
-function Signup() {
-    const [signedUp, setSignedUp] = useState(false);
+function SignUpForm() {
 
-    const handleSignup = (e) => {
-        e.preventDefault();
-        console.log("Welcome"); // or display a message to the user
-        setSignedUp(true);
-    }
-    
-    return (
-        <div>
-            <div className="signupPage">
-                <h1>Signup</h1>
-            </div>
-            <div className="signupform">
-                {signedUp ? (
-                    <p>Welcome!</p>
-                ) : (
-                    <form onSubmit={handleSignup}>
-                        <label htmlFor="firstName">First Name:</label>
-                        <input type="text" id="firstName" name="firstName" required /><br /><br />
-                        <label htmlFor="lastName">Last Name:</label>
-                        <input type="text" id="lastName" name="lastName" required /><br /><br />
-                        <label htmlFor="email">Email:</label>
-                        <input type="text" id="email" name="email" required /><br /><br />
-                        <label htmlFor="password">Password:</label>
-                        <input type="password" id="password" name="password" required /><br /><br />
-                        <button className="signup-btn" type="submit">Sign Up</button>
-                    </form>
-                )}
-            </div>
-        </div>
-    );
+    const navigate = useNavigate()
+
+    const [user, setUser] = useState({
+        first_name: '',
+        last_name: '',
+        email: '',
+        password: ''
+    })
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+
+        await fetch(`http://localhost:3002/users/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+
+        navigate.push(`/`)
+    }
+
+    return (
+        <main>
+            <h1>Sign Up</h1>
+            <form onSubmit={handleSubmit}>
+                <div className="row">
+                    <div className="col-sm-6 form-group">
+                        <label htmlFor="firstName">First Name</label>
+                        <input
+                            required
+                            value={user.first_name}
+                            onChange={e => setUser({ ...user, first_name: e.target.value })}
+                            className="form-control"
+                            id="firstName"
+                            name="firstName"
+                        />
+                    </div>
+                    <div className="col-sm-6 form-group">
+                        <label htmlFor="lastName">Last Name</label>
+                        <input
+                            required
+                            value={user.last_name}
+                            onChange={e => setUser({ ...user, last_name: e.target.value })}
+                            className="form-control"
+                            id="lastName"
+                            name="lastName"
+                        />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-sm-6 form-group">
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            required
+                            value={user.email}
+                            onChange={e => setUser({ ...user, email: e.target.value })}
+                            className="form-control"
+                            id="email"
+                            name="email"
+                        />
+                    </div>
+                    <div className="col-sm-6 form-group">
+                        <label htmlFor="password">Password</label>
+                        <input
+                            type="password"
+                            required
+                            value={user.password}
+                            onChange={e => setUser({ ...user, password: e.target.value })}
+                            className="form-control"
+                            id="password"
+                            name="password"
+                        />
+                    </div>
+                </div>
+                <input className="btn btn-primary" type="submit" value="Sign Up" />
+            </form>
+        </main>
+    )
 }
 
-export default Signup;
+export default SignUpForm
