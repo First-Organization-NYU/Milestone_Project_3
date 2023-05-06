@@ -3,29 +3,30 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('carts', {
-      cartitem_id: {
-        allowNull:false,
-        autoIncrement: true,
-        primaryKey: true,
-        type: Sequelize.INTEGER
-      },
+      // cartitem_id: {
+      //   allowNull:false,
+      //   autoIncrement: true,
+      //   primaryKey: true,
+      //   type: Sequelize.INTEGER
+      // },
       barcode: {
+        allowNull: false,
+        // autoIncrement: true,
+        primaryKey: true,
         type: Sequelize.INTEGER
       },
       name: {
         type: Sequelize.STRING
       },
-      cost: {
+      brand: {
+        type: Sequelize.STRING
+      },
+      price: {
         type: Sequelize.INTEGER
+      },
+      image: {
+        type: Sequelize.STRING
       }
-      // createdAt: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE
-      // },
-      // updatedAt: {
-      //   allowNull: false,
-      //   type: Sequelize.DATE
-      // }
     });
   },
   async down(queryInterface, Sequelize) {

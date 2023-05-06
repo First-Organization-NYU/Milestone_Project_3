@@ -10,9 +10,11 @@ function Signup() {
     }
     
     return (
-        <div>
-            <div className="signupPage">
-                <h1>Signup</h1>
+
+        <div className="page-content">
+            <div className="signUpPage">
+                <h1>Sign Up</h1>
+
             </div>
             <div className="signupform">
                 {signedUp ? (

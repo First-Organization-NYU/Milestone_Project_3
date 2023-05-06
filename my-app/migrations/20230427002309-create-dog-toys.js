@@ -5,7 +5,7 @@ module.exports = {
     await queryInterface.createTable('dog_toys', {
       barcode: {
         allowNull: false,
-        autoIncrement: true,
+        // autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
@@ -20,7 +20,7 @@ module.exports = {
       },
       image: {
         type: Sequelize.STRING
-      },
+      }
     });
   },
   async down(queryInterface, Sequelize) {
