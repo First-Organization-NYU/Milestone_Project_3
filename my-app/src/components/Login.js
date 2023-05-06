@@ -17,7 +17,7 @@ function Login() {
             <div className="loginform">
                 {loggedIn ? (
                     <p>Welcome!</p>
-                    // <p>Welcome {users.firstName} {users.lastName}!</p>
+                    // <p>Welcome {users.first_name} {users.last_name}!</p>
                 ) : (
                     <form>
                         <label htmlFor="email">Email:</label>
