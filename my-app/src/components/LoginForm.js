@@ -168,6 +168,12 @@ function LoginForm() {
                
                 <input className="btn btn-primary" type="submit" value="Login" autoFocus/>
             </form>
+            <p>
+                Create an account<br />
+                <span>
+                    <a href="/signup">Sign In</a>
+                </span>
+            </p>
             </section>
         </main>
     )

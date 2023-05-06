@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect} from "react";
-import { useNavigate} from "react-router";
+// import { useNavigate} from "react-router";
 import './StyleForm.css'
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,7 +12,7 @@ const EMAIL_REGEX = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/;//eslin
 
 
 function SignUpForm() {
-	const navigate = useNavigate()
+	// const navigate = useNavigate()
 
 	const [inputCredentials, setInputCredentials] = useState({
 		first_name: "",
@@ -288,6 +288,16 @@ function SignUpForm() {
 
 				<input className="btn btn-primary" type="submit" value="Sign Up" />
 			</form>
+			<p>
+				Already registered?<br />
+				<span>
+					<a href="/login">Sign In</a>
+				</span>
+			</p>
+
+
+
+
 		</section>
 				
 										

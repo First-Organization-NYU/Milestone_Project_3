@@ -8,30 +8,28 @@ function NavBar() {
 
     const { currentUser } = useContext(CurrentUser)
 
-    let loginActions = (
+    let postCurrentUser = (
         <>
-       
-            <li style={{ float: 'center' }}>
-                <p><h6>Welcome to Barking Boutique</h6></p>
-            </li>
-        {/*
-            <li style={{ float: 'right' }}>
-                <a href="/" onClick={() => navigate.push("/login")}>
-                    Login
-                </a>
-            </li> */}
+            <div style={{ float: 'right',  color: 'chartreuse' }} >
+                <li>
+                    <h5>Welcome to Barking Boutique</h5>
+                </li>
+            
+            </div>
         </>
     )
 
     if (currentUser) {
-        loginActions = (
+        postCurrentUser = (
             <>
-            <li style={{ float: 'right' }}>
-                <a href="/" onClick={() => navigate.push("/login")}>Log Out</a>
-            </li>
-            <li style={{ float: 'right' }}>
-                Logged in as {currentUser.first_name} {currentUser.last_name}
-            </li>
+            <div style={{ float: 'right',  color: 'chartreuse' }} >
+                <li style={{ float: 'right', color: 'chartreuse' }}>
+                    <h5><a href="/" onClick={() => navigate.push("/login")}>Log Out</a></h5>
+                </li>
+                <li style={{ float: 'right' }}>
+                    <h5> Logged in as {currentUser.first_name} {currentUser.last_name}</h5>
+                </li>
+            </div>
         </>
         )
     }
@@ -39,25 +37,13 @@ function NavBar() {
     return (
         <nav>
             <ul>
-                
-
                 <li>
-                    <a href="/login" onClick={() => navigate.push("/login")}>
-                        Log in
-                    </a>
-                </li>
-                <li>
-                    <a href="/signup" onClick={() => navigate.push("/signup")}>
-                        Sign up
-                    </a>
-                </li>
-                <li>
-                    <a href="/cart" onClick={() => navigate.push("/cart")}>
+                    {/* <a href="/cart" onClick={() => navigate.push("/cart")}>
                         Shopping Cart 🛒
-                    </a>
+                    </a> */}
                     
                 </li>
-                {loginActions}
+                {postCurrentUser}
             </ul>
         </nav>
     )

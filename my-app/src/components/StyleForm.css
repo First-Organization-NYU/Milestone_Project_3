@@ -29,7 +29,7 @@ form {
 
 input {
   width: 100%;
-  padding: 12px 20px;
+  padding: 6px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
@@ -37,14 +37,15 @@ input {
 section {
     width: 100%;
     max-width: 420px;
-    min-height: 400px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: left;
     padding: 1rem;
     background-color: rgba(0,0,0,0.4);
     margin-left:600px;
-    margin-top:200px;
+    margin-top:50px;
+    margin-bottom: 100px;
 
 }
 
@@ -79,19 +80,7 @@ button {
   padding: 0.5rem;
 }
 
-.instructions {
-    font-size: 0.75rem;
-    border-radius: 0.5rem;
-    background: #000;
-    color: #fff;
-    padding: 0.25rem;
-    position: relative;
-    bottom: -10px;
-}
 
-.instructions > svg {
-    margin-right: 0.25rem;
-}
 
 .offscreen {
     position: absolute;
