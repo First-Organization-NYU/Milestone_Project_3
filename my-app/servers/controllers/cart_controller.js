@@ -6,12 +6,9 @@ const {Op} = require("sequelize")
 // Get All Cart Items
 cart.get('/', async(req, res) => {
     try {
-        const foundCartItems = await Cart.findAll()
-            // {
-            //     where: {
-            //         name: {[Op.like]: `%${req.query.name ? req.query.name: ''}%`}
-            //     }
-            // }
+        const foundCartItems = await Cart.findAll({
+            attributes: ['barcode', 'name', 'cost']
+        })
         res.status(200).json(foundCartItems)
     } catch (error) {
         res.status(500).json(error)
@@ -35,13 +32,25 @@ cart.get('/cartItem_id', async(req,res) => {
 // Create a Cart Item
 cart.post('/', async(req,res) => {
     try{
-        const newCartItem = await Cart.Create(req.body)
+        // const { barcode, name, brand, price, image } = req.body;
+        // const newCartItem = await Cart.create({
+        //   barcode,
+        //   name,
+        //   brand,
+        //   price,
+        //   image,
+        // });
+
+        // const newCartItem = await Cart.create(req.body)
+        const newCartItem = await Cart.create(req.body)
+        console.log(req.body)
         res.status(200).json({
             message: `Successfully added ${newCartItem} to your cart.`,
             data: newCartItem
         })
     }catch(error){
         res.status(500).json(error)
+        console.log(error)
     }
 })
 

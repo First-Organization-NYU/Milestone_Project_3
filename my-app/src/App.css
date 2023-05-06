@@ -82,6 +82,7 @@ nav a:hover {
 .signup-btn,
 .add-btn,
 .cart-btn,
+.view-btn,
 .confirm-btn {
   background-color: rgba(218, 28, 54, 255);
   border-radius: 100px;
@@ -95,6 +96,7 @@ nav a:hover {
 .signup-btn a,
 .add-btn a,
 .cart-btn a,
+.view-btn a,
 .confirm-btn a {
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -106,6 +108,7 @@ nav a:hover {
 .signup-btn a:hover,
 .add-btn a:hover,
 .cart-btn a:hover,
+.view-btn a:hover,
 .confirm-btn a:hover {
   color: pink;
 }
@@ -154,6 +157,7 @@ img {
 
 .toyDisplay, .productDisplay, .treatDisplay{
   background-color: whitesmoke;
+  color:black;
   border-style: solid;
   border-color: rgb(188, 35, 35);
   border-width: 3px;
@@ -175,8 +179,49 @@ img {
   justify-content: center;
 }
 
-.addToCartButton{
+.addToCartButton, .deleteButton, .incCounter, .decCounter{
   background-color: rgb(211, 145, 145);
   border-radius: 10px;
-  font-weight:bold
+  font-weight:bold;
+  font-size: larger;
+}
+
+.shopping-cart{
+  padding: 2em
+}
+
+.itemQuantityInCart{
+  padding: 1em;
+}
+
+.counter{
+  padding: 1em;
+  font-weight: bold;
+}
+
+#cantCheckOut{
+  border-color: #282c34;
+  border-width: 5em;
+}
+
+.page-content{
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dogbreed-card, {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dogbreed-card-image{
+  margin: 2em;
+}
+
+.view-btn{
+  margin: 2em;
 }

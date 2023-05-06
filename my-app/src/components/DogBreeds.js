@@ -51,6 +51,7 @@ export default function DogBreeds() {
             <div>
                 <h1>Dog Breeds</h1>
             </div>
+            <h2>Browse Your Favorite Dog Breed here to see what they look like!</h2>
             <p>
                 <div className="dogBreeds-api">
                 This application is poweed by {" "}
