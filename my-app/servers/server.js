@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 // Configuration
 require('dotenv').config()
-const PORT = process.env.PORT
+// const PORT = process.env.PORT
 const app = express()
 
 // Middleware
@@ -17,6 +17,12 @@ app.use(bodyParser.json())
 
 // const cartController = require('./controllers/cart_controller')
 // app.use('/cart', cartController)
+
+
+
+app.use('/users', require('./controllers/users'))
+
+app.use('/authentication', require('./controllers/authentication'))
 
 const toysController = require('./controllers/toys_controller')
 app.use('/toys', toysController)
