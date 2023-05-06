@@ -13,7 +13,7 @@ function Treats() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("http://localhost:3002/treats");
+      const result = await axios("ec2-34-197-91-131.compute-1.amazonaws.com/treats");
       setData(result.data)
     }
     fetchData()
@@ -27,14 +27,16 @@ function Treats() {
     setCart([...cart, cartItem]);
     alert('Your item has been added to cart!')
 
-    // try {
-    //       const response = await axios.post(`http://localhost:3002/cart`, {newItem})
-    //       console.log(response.data)
-    //       console.log('added!')
-    //     } catch (error) {
-    //       console.log(`Error Message is: ${error}`)
+
+    try {
+          const response = await axios.post(`ec2-34-197-91-131.compute-1.amazonaws.com/cart`, {newItem})
+          console.log(response.data)
+          console.log('added!')
+        } catch (error) {
+          console.log(`Error Message is: ${error}`)
      
-    //     }
+        }
+
 
   }
 

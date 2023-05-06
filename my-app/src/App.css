@@ -157,6 +157,7 @@ img {
 
 .toyDisplay, .productDisplay, .treatDisplay{
   background-color: whitesmoke;
+  color:black;
   border-style: solid;
   border-color: rgb(188, 35, 35);
   border-width: 3px;

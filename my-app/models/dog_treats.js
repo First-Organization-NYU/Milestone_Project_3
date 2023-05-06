@@ -22,19 +22,19 @@ module.exports = (sequelize, DataTypes) => {
       },
       name: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       },
       brand: {
         type: DataTypes.STRING,
-        allowNull: false
+        allowNull: true
       },
       // weight: {
       //   type: DataTypes.INTEGER,
-      //   allowNull: false
+      //   allowNull: true
       // },
       price:{
         type: DataTypes.INTEGER,
-        allowNullP: false  
+        allowNullP: true  
       },
       image: {
         type: DataTypes.STRING,

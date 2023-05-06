@@ -14,7 +14,8 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: dodgerblue;
+    /* background-color: rgb(154, 196, 239); */
+    background-image: linear-gradient(to bottom, rgb(47, 178, 244), rgb(213, 217, 225));
 }
 
 form {

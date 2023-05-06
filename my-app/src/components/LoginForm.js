@@ -1,6 +1,6 @@
 import {useState, useEffect, useRef,useContext } from "react"
 import { useNavigate } from "react-router-dom"
-import { CurrentUser } from "../context/CurrentUser" 
+import { CurrentUser } from "../context/CurrentUser.js" 
 import './StyleForm.css'
 import { faCheck, faTimes, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
