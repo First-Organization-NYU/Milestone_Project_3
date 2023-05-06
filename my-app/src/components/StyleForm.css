@@ -38,12 +38,11 @@ section {
     width: 100%;
     max-width: 420px;
     min-height: 350px;
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     justify-content: left;
     padding: 1rem;
     background-color: rgba(0,0,0,0.4);
-    margin-left:600px;
     margin-top:50px;
     margin-bottom: 100px;
 

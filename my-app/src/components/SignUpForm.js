@@ -168,7 +168,7 @@ function SignUpForm() {
                 </section>
             ) : (
 
-		<section>
+		<section className="form-section">
 			
 			<p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} >{errMsg}</p>
 			<div>
