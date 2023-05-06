@@ -12,7 +12,7 @@ for our MileStone 3 Project, our final project for our Web Development Coding Bo
 This project is a fullstack project devleoped using the following technolgies: 
 React, Boostrap React, CSS, HTML, Javascirpt and Node.js. 
 The page connects to a PostgreSQL database using Sequelize.
-The use of Amazon Web Services, Elastic Beanstalk was used to deploy this project.
+Heroku was used to deploy this project.
 
 # Features 
 
@@ -42,7 +42,7 @@ The Barking Boutique Ecommerce Store has the following features:
 - JavaScript
 - Sequelize
 - Node.JS
-- AWS Elastic Beanstalk 
+- Heroku
 
 ## Routes
 | Method | Path | Purpose |
@@ -61,7 +61,6 @@ The Barking Boutique Ecommerce Store has the following features:
 
 
 # Database:
-- AWS
 - pgAdmin
 - PostgreSQL
 
@@ -99,19 +98,30 @@ The Barking Boutique Ecommerce Store has the following features:
 | image | String |
 | price | Integer |
 
-**Movies**
+**Pet Breeds**
 | Field | Type | 
 | -------- | -------- |
-| id | Movie ID |
 | name | String |
-| duration | Integer |
+| bred_for | String |
+| weight(kg) | Integer |
+| height(cm) | Integer |
+| breed | String |
+| lifespan | Integer |
+| temperament | String |
 
 ## Features 
 
 The Barking Boutique Web Store has the following features:
 - Homepage with a navagation bar with links to the dog treats, dog toys and movies
-- User Account Sign up and Login in
-- 
+- Users are able to click the links to view dog treats, toys and breeds from the database
+- Users are able to sign up for an account and login in
+- After a user signs up they recieve a confirmation and a 10% discount on there first purchase
+- Signed in users can view the shopping cart and make purchases
+- Once a purchase is made a confirmation page appears
+- User is able to view different dog breeds from a dog api
+- Users can search for different dog breeds from the database
+- Customers can update there cart by being able to delete, or increase quantity of items
+- Customers are also able to view the price incease and decrease as they remove or add itmes to cart
 
 ## Acknowledgement
 
@@ -133,7 +143,9 @@ each other and all of our previous instructors who helped us develop the knowled
 
 # Bugs/Fixes
 
-- Issues with connection to the AWS Elastic Beanstalk
+- Issues with connection to Heroku and our pgAdmin database
+- Show the name of the user who is logged in on the page
+- Allow only logged in users to view the shopping cart
 
 # Contributing
 Contributions to the Barking Boutique are more than welcome. To contribute, follow these steps:
@@ -148,10 +160,10 @@ Contributions to the Barking Boutique are more than welcome. To contribute, foll
 
 If you have any questions please reach out to us at:
 
-- Amy@email.com
-- Veny@email.com
-- Kamel@email.com
-- Neil@email.com
+- venycordova@gmail.com
+- kamelbarakat8796@gmail.com
+- neilgardner@verizon.net
+- yj776@nyu.edu
 
 # License
 This project is licensed under the MIT License.

@@ -44,7 +44,7 @@ function Dog() {
                             )}
 
                             <div>
-                                <ul>
+                                <ul className="dogbreed-list">
                                     <li>
                                         <span>Bred For:</span>{" "}
                                         {item.bred_for}
@@ -71,9 +71,8 @@ function Dog() {
                                     </li>
                                 </ul>
 
-                                <Link to="/" >
-                                    &lar; Back
-                                </Link>
+                                <button><Link to="/">Home Page</Link></button>
+
                             </div>
                         </p>
                     </div>
