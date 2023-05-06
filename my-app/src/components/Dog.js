@@ -71,9 +71,8 @@ function Dog() {
                                     </li>
                                 </ul>
 
-                                <Link to="/" >
-                                    &lar; Back
-                                </Link>
+                                <button><Link to="/">Home Page</Link></button>
+
                             </div>
                         </p>
                     </div>

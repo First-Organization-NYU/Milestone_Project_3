@@ -10,14 +10,19 @@ import Signup from './components/Signup'
 import Toys from './components/Toys'
 import Treats from './components/Treats'
 import { BrowserRouter as Router, Route, Link, Routes, BrowserRouter } from 'react-router-dom';
-import React from 'react';
+import React, {useContext} from 'react';
 import Confirmation from './components/Confirmation';
-
-
+import CartProvider from './context/CartContext'
+import { CartContext } from './context/CartContext';
+// import OuterApp from './OuterApp';
 
 function App() {
+
+  // const [cart, setCart] = useContext(CartContext)
+
   return (
     <div className="App">
+      <CartProvider>
       <BrowserRouter>
         <header>
           <div className='header'>
@@ -39,7 +44,7 @@ function App() {
             <li><Link to="/toys">Toys</Link></li>
             <li><Link to="/dogbreeds">Dog Breeds</Link></li>
             <li><Link to="/about">About Us</Link></li>
-            <li><a href='https://pet-adoption-umzw.vercel.app/'>Pet Adoption</a></li>
+            <li><a href='https://nyu-milestonetwo.herokuapp.com/'>Pet Adoption</a></li>
           </ul>
         </nav>
 
@@ -60,6 +65,7 @@ function App() {
         </div>
 
       </BrowserRouter>
+      </CartProvider>
 
     </div>
   );
