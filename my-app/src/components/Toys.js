@@ -16,7 +16,9 @@ function Toys() {
 
   useEffect(() => {
     const fetchData = async () => {
+
       const result = await axios("ec2-34-197-91-131.compute-1.amazonaws.com/toys");
+
       console.log(result.data)
       setData(result.data)
     }
@@ -53,7 +55,11 @@ function Toys() {
     alert('Your item has been added to cart!')
 
     try {
+
           const response = await axios.post(`ec2-34-197-91-131.compute-1.amazonaws.com/cart`, newItem)
+
+          const response = await axios.post(`http://localhost:3002/cart`, newItem)
+
           console.log(response.data)
           console.log('added!')
         } catch (error) {

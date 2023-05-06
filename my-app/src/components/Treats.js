@@ -27,6 +27,7 @@ function Treats() {
     setCart([...cart, cartItem]);
     alert('Your item has been added to cart!')
 
+
     try {
           const response = await axios.post(`ec2-34-197-91-131.compute-1.amazonaws.com/cart`, {newItem})
           console.log(response.data)
@@ -35,6 +36,7 @@ function Treats() {
           console.log(`Error Message is: ${error}`)
      
         }
+
 
   }
 
