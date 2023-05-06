@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom"
+import german from '../german.jpg'
+
 function Confirmation() {
     return (
         <div className="confirmPage">
