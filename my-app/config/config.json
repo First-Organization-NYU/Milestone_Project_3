@@ -1,23 +1,23 @@
   {
     "development": {
-      "username": "postgres",
+      "username": "cyhmievnedifxm",
       "password": "admin",
-      "database": "milestone_project_3",
-      "host": "127.0.0.1",
+      "database": "dic4ud4futjb",
+      "host": "ec2-34-197-91-131.compute-1.amazonaws.com",
       "dialect": "postgres"
     },
     "test": {
-      "username": "postgres",
+      "username": "cyhmievnedifxm",
       "password": "admin",
-      "database": "milestone_project_3_test",
-      "host": "127.0.0.1",
+      "database": "dic4ud4futjb_test",
+      "host": "ec2-34-197-91-131.compute-1.amazonaws.com",
       "dialect": "postgres"
     },
     "production": {
-      "username": "postgres",
+      "username": "cyhmievnedifxm",
       "password": "admin",
-      "database": "milestone_project_3_production",
-      "host": "127.0.0.1",
+      "database": "dic4ud4futjb_production",
+      "host": "ec2-34-197-91-131.compute-1.amazonaws.com",
       "dialect": "postgres"
     }
   }
